@@ -6,7 +6,11 @@
       <v-container>
         <v-row class="text-center">
           <v-col class="mb-4">
-            <h1 class="display-1 font-weight-bold mb-12">Key Switch Tester</h1>
+            <!-- <h1 class="display-1 font-weight-bold mb-12">Key Switch Tester</h1> -->
+            <v-btn icon>
+              <v-icon>mdi-ear-hearing</v-icon>
+            </v-btn>
+            <span>Sound will be played, so pay attention to volume</span>
             <sandbox></sandbox>
             <switch-card-list></switch-card-list>
           </v-col>
@@ -31,9 +35,9 @@ export default {
     MyHeader,
     MyFooter,
     Sandbox,
-    SwitchCardList,
+    SwitchCardList
   },
 
-  data: () => ({}),
+  data: () => ({})
 };
 </script>

@@ -1,72 +1,52 @@
 [
   {
     "id": 1,
-    "japanese": "クリア軸",
-    "english": "Gateron Clear",
-    "color": "clear",
-    "type": "Linear",
-    "travel": "4.0mm",
-    "actuation": "35g",
-    "sample": 4
+    "japanese": "赤軸",
+    "english": "Red",
+    "color": "red",
+    "type1": "Mechanical",
+    "type2": "Linear",
+    "file": "red",
+    "sample": 3
   },
   {
     "id": 2,
-    "japanese": "赤軸",
-    "english": "Gateron Red",
-    "color": "red",
-    "type": "Linear",
-    "travel": "4.0mm",
-    "actuation": "45g",
-    "sample": 4
+    "japanese": "茶軸",
+    "english": "Brown",
+    "color": "brown",
+    "type1": "Mechanical",
+    "type2": "Tactile",
+    "file": "brown",
+    "sample": 3
   },
   {
     "id": 3,
-    "japanese": "黄軸",
-    "english": "Gateron Yellow",
-    "color": "yellow",
-    "type": "Linear",
-    "travel": "4.0mm",
-    "actuation": "50g",
-    "sample": 4
+    "japanese": "青軸",
+    "english": "Blue",
+    "color": "blue",
+    "type1": "Mechanical",
+    "type2": "Clicky",
+    "file": "blue",
+    "sample": 3
   },
   {
     "id": 4,
-    "japanese": "黒軸",
-    "english": "Gateron Black",
+    "japanese": "東プレ",
+    "english": "Topre",
     "color": "black",
-    "type": "Linear",
-    "travel": "4.0mm",
-    "actuation": "60g",
-    "sample": 4
+    "type1": "Capacitive",
+    "type2": null,
+    "file": "topre",
+    "sample": 3
   },
   {
     "id": 5,
-    "japanese": "茶軸",
-    "english": "Gateron Brown",
-    "color": "brown",
-    "type": "Tactile",
-    "travel": "4.0mm",
-    "actuation": "55g",
-    "sample": 4
-  },
-  {
-    "id": 6,
-    "japanese": "青軸",
-    "english": "Gateron Blue",
-    "color": "blue",
-    "type": "Clicky",
-    "travel": "4.0mm",
-    "actuation": "60g",
-    "sample": 4
-  },
-  {
-    "id": 7,
-    "japanese": "緑軸",
-    "english": "Gateron Green",
-    "color": "green",
-    "type": "Clicky",
-    "travel": "4.0mm",
-    "actuation": "80g",
-    "sample": 4
+    "japanese": "Mac Book",
+    "english": "Mac Book",
+    "color": "grey",
+    "type1": "Membrane",
+    "type2": null,
+    "file": "mac",
+    "sample": 3
   }
 ]

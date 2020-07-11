@@ -6,11 +6,8 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn href="https://twitter.com/ashcolor06" target="_blank" text>
-      <v-icon>mdi-twitter</v-icon>
-    </v-btn>
-    <v-btn href="mailto:ashcolor27@gmail.com" target="_blank" text>
-      <v-icon>mdi-email-open-outline</v-icon>
+    <v-btn href="https://github.com/ashcolor" target="_blank" text>
+      <v-icon>mdi-github</v-icon>
     </v-btn>
   </v-app-bar>
 </template>

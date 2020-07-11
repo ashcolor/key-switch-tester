@@ -6,7 +6,6 @@
 
 <script>
 import SwitchCard from "./SwitchCard";
-import SWITCHDATA from "../data/switches.json";
 
 export default {
   name: "SwitchCardList",
@@ -16,7 +15,7 @@ export default {
   data: () => ({}),
   computed: {
     keySwitches: function() {
-      return SWITCHDATA;
+      return this.$store.state.keySwitches;
     }
   },
   created: function() {},
