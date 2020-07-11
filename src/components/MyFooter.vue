@@ -1,14 +1,7 @@
 <template>
   <v-footer class="text-center" absolute padless>
     <v-col cols="12">
-      <ins
-        class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-7192297503374959"
-        data-ad-slot="4149081771"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+      <vue-adsense ad-client="ca-pub-7192297503374959" ad-slot="4149081771" ad-style="display:block" ad-format="auto" data-full-width-responsive="true"> </vue-adsense>
     </v-col>
     <!-- <v-col class="text-caption text-center">
       ※本音声は実際のキースイッチの打鍵音を収録していますが、録音状況やシステム化の際の加工のため本来の音とは異なります。
@@ -20,7 +13,12 @@
   </v-footer>
 </template>
 <script>
+import VueAdsense from "vue-adsense";
+
 export default {
-  name: "MyFooter"
+  name: "MyFooter",
+  components: {
+    VueAdsense,
+  },
 };
 </script>
