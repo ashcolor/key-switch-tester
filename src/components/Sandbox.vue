@@ -3,6 +3,7 @@
     id="sandbox"
     ref="sandbox"
     label="Test key switch sounds."
+    rows="10"
     outlined
     no-resize
     v-on:keydown="playSample"
