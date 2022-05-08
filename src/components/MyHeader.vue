@@ -1,19 +1,16 @@
-<template>
-  <v-app-bar app color="primary" dark>
-    <div class="d-flex align-center">
-      <h1>Key Switch Tester</h1>
-    </div>
-
-    <v-spacer></v-spacer>
-
-    <v-btn href="https://github.com/ashcolor" target="_blank" text>
-      <v-icon>mdi-github</v-icon>
-    </v-btn>
-  </v-app-bar>
-</template>
-
-<script>
-export default {
-  name: "MyHeader"
-};
+<script setup>
+import { Icon } from "@iconify/vue";
 </script>
+
+<template>
+    <div class="navbar bg-primary">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl text-white"> Key Switch Tester </a>
+        </div>
+        <div class="flex-none">
+            <a href="https://github.com/ashcolor" target="_blank">
+                <Icon icon="akar-icons:github-fill" width="24" height="24" class="cursor-pointer" />
+            </a>
+        </div>
+    </div>
+</template>

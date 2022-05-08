@@ -1,43 +1,26 @@
-<template>
-  <v-app>
-    <my-header />
+<script setup>
+import { Icon } from "@iconify/vue";
+import { storeToRefs } from "pinia";
+import { useAudioStore } from "./stores/audio";
 
-    <v-content>
-      <v-container>
-        <v-row class="text-center">
-          <v-col class="mb-4">
-            <!-- <h1 class="display-1 font-weight-bold mb-12">Key Switch Tester</h1> -->
-            <v-btn icon>
-              <v-icon>mdi-ear-hearing</v-icon>
-            </v-btn>
-            <span>Sound will be played, so pay attention to volume</span>
-            <sandbox></sandbox>
-            <switch-card-list></switch-card-list>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-content>
+const audioStore = useAudioStore();
+const { audioContext } = storeToRefs(audioStore);
 
-    <my-footer />
-  </v-app>
-</template>
-
-<script>
-import MyHeader from "./components/MyHeader";
-import MyFooter from "./components/MyFooter";
-import Sandbox from "./components/Sandbox";
-import SwitchCardList from "./components/SwitchCardList";
-
-export default {
-  name: "App",
-
-  components: {
-    MyHeader,
-    MyFooter,
-    Sandbox,
-    SwitchCardList
-  },
-
-  data: () => ({})
-};
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+audioContext.value = new AudioContext();
 </script>
+
+<template>
+    <MyHeader />
+    <div class="container mx-auto">
+        <div class="text-center mt-4">
+            <Icon icon="mdi:headphones" class="inline" width="18" height="18" />
+            <span>Sound will be played, so pay attention to volume</span>
+        </div>
+        <div>
+            <Sandbox />
+        </div>
+        <SwitchCardList />
+    </div>
+    <MyFooter />
+</template>
