@@ -2,7 +2,7 @@
 
 ## URL
 
-[https://ashcolor.github.io/key-switch-tester/dist](https://ashcolor.github.io/key-switch-tester/dist)
+[https://ashcolor.github.io/key-switch-tester](https://ashcolor.github.io/key-switch-tester)
 
 ## Project setup
 
