@@ -1,4 +1,5 @@
 export namespace CONSTS {
+    export const STORAGE_PATH = "https://storage.googleapis.com/key-switch-tester/sound/v2";
     export const KEY_SWITCHES = [
         {
             id: 1,

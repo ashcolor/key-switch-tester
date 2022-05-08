@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { storeToRefs } from "pinia";
 import { useAudioStore } from "../stores/audio";
+import { CONSTS } from "../utils/constants";
+import { utils } from "../utils/utils";
 
 interface Props {
     keySwitch: any;
@@ -13,21 +14,12 @@ const audioStore = useAudioStore();
 const { selectedSwitchId } = storeToRefs(audioStore);
 const audioContext = computed(() => audioStore.audioContext);
 
-const onClick = (id) => {
-    playSample();
+const onClick = async (id) => {
     selectedSwitchId.value = id;
-};
-
-const playSample = async () => {
-    const response = await fetch(
-        `https://storage.googleapis.com/key-switch-tester/sound/v2/${props.keySwitch.file}.mp3`
+    const audioBuffer = await utils.getAudioBufferFromUrl(
+        `${CONSTS.STORAGE_PATH}/${props.keySwitch.file}.mp3`
     );
-    const arrayBuffer = await response.arrayBuffer();
-    const audioBuffer = await audioContext.value.decodeAudioData(arrayBuffer);
-    const sampleSource = audioContext.value.createBufferSource();
-    sampleSource.buffer = audioBuffer;
-    sampleSource.connect(audioContext.value.destination);
-    sampleSource.start();
+    utils.playBuffer(audioContext.value, audioBuffer);
 };
 </script>
 

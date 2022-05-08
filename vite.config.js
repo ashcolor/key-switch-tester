@@ -9,17 +9,13 @@ export default defineConfig({
     plugins: [
         vue(),
         AutoImport({
-            include: [
-                /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-                /\.vue$/,
-                /\.vue\?vue/, // .vue
-                /\.md$/, // .md
-            ],
+            include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
             imports: [
                 "vue",
                 {
                     "@vueuse/core": ["useMouse", ["useFetch", "useMyFetch"]],
                     axios: [["default", "axios"]],
+                    pinia: ["storeToRefs"],
                 },
             ],
             dts: "./src/auto-imports.d.ts",
