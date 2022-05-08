@@ -52,7 +52,7 @@ const getRandomInt = (max) => {
     <div class="form-control">
         <textarea
             ref="textareaRef"
-            class="textarea textarea-bordered h-48"
+            class="textarea textarea-bordered h-48 font-electronic"
             placeholder="Test key switch sounds."
             @keydown="playSample()"
         />
