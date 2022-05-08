@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue";
 <template>
     <div class="navbar bg-primary">
         <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl text-white"> Key Switch Tester </a>
+            <a class="btn btn-ghost normal-case text-xl text-white">Key Switch Tester</a>
         </div>
         <div class="flex-none">
             <a href="https://github.com/ashcolor" target="_blank">
