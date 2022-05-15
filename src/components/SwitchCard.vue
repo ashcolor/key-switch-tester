@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAudioStore } from "../stores/audio";
 import { CONSTS } from "../utils/constants";
-import { utils } from "../utils/utils";
+import { util } from "../utils/util";
 
 interface Props {
     keySwitch: any;
@@ -16,10 +16,10 @@ const audioContext = computed(() => audioStore.audioContext);
 
 const onClick = async (id) => {
     selectedSwitchId.value = id;
-    const audioBuffer = await utils.getAudioBufferFromUrl(
+    const audioBuffer = await util.getAudioBufferFromUrl(
         `${CONSTS.STORAGE_PATH}/${props.keySwitch.file}.mp3`
     );
-    utils.playBuffer(audioContext.value, audioBuffer);
+    util.playBuffer(audioContext.value, audioBuffer);
 };
 </script>
 

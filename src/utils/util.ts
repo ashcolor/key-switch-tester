@@ -1,4 +1,4 @@
-export namespace utils {
+export namespace util {
     export const getRandomInt = (max: number) => Math.floor(Math.random() * Math.floor(max));
 
     //AudioContext
@@ -16,7 +16,7 @@ export namespace utils {
         return;
     };
     export const playBuffersRandom = (audioContext: AudioContext, buffers: Array<any>) => {
-        const audioBuffer = buffers[utils.getRandomInt(buffers.length)];
+        const audioBuffer = buffers[util.getRandomInt(buffers.length)];
         playBuffer(audioContext, audioBuffer);
         return;
     };
